@@ -40,4 +40,9 @@ const  createStore = (initialState) => {
 
 const store = createStore(0)
 
+const reducer = () => {
+    const found = actions.find((newAction) => newAction.action.type === action.type)
+    return found.callback(state)
+}
+ 
 console.log(store.getState())
