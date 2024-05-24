@@ -27,6 +27,15 @@ const  createStore = (initialState) => {
         actions.push({action, callback})
     }
 
+    const dispatch = (action) => {
+        state = reducer (state, action, actions)
+    }
+
+    const getState = () => {
+        return state
+    }
+
+    return {getState, dispatch, subscribe}
 }
 
 console.log(store.getState())
