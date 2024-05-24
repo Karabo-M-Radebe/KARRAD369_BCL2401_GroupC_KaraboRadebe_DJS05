@@ -19,7 +19,7 @@ const get = (state, key) => {
     return state[key]
 }*/
 
-const  createStore = (initialState) => {
+const  createStore = (initialState, reducer) => {
     const state = initialState;
     const actions = [];
 
@@ -38,7 +38,7 @@ const  createStore = (initialState) => {
     return {getState, dispatch, subscribe}
 }
 
-const store = createStore(0)
+const store = createStore(0, reducer)
 
 const reducer = () => {
     const found = actions.find((newAction) => newAction.action.type === action.type)
