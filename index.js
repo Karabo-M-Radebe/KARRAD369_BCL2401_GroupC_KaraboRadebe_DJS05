@@ -1,4 +1,4 @@
-const state = {
+/*const state = {
     value: 1, 
 }
 const increment = (state) => {
@@ -17,4 +17,16 @@ const decrement = (state) => {
 
 const get = (state, key) => {
     return state[key]
+}*/
+
+const  createStore = () => {
+    const state = initialState;
+    const actions = [];
+
+    const subscribe = () => {
+        actions.push({action, callback})
+    }
+
 }
+
+console.log(store.getState())
