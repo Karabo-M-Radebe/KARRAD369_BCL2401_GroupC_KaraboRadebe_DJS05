@@ -20,7 +20,7 @@ const get = (state, key) => {
 }*/
 
 const  createStore = (initialState, reducer) => {
-    const state = initialState;
+    let state = initialState;
     const actions = [];
 
     const subscribe = (action, callback) => {
