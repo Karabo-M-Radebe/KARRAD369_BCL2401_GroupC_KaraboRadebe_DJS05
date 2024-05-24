@@ -38,4 +38,6 @@ const  createStore = (initialState) => {
     return {getState, dispatch, subscribe}
 }
 
+const store = createStore(0)
+
 console.log(store.getState())
