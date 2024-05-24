@@ -19,11 +19,11 @@ const get = (state, key) => {
     return state[key]
 }*/
 
-const  createStore = () => {
+const  createStore = (initialState) => {
     const state = initialState;
     const actions = [];
 
-    const subscribe = () => {
+    const subscribe = (action, callback) => {
         actions.push({action, callback})
     }
 
