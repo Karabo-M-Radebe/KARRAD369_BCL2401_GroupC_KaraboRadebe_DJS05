@@ -37,12 +37,16 @@ const  createStore = (initialState, reducer) => {
 
     return {getState, dispatch, subscribe}
 }
-
-const store = createStore(0, reducer)
-
 const reducer = () => {
     const found = actions.find((newAction) => newAction.action.type === action.type)
     return found.callback(state)
 }
- 
+
+const store = createStore(0, reducer)
+
+store.subscribe({type: 'Add'}, (state) => state +1)
+store.subscribe({type: 'Sub'}, (state) => state -1)
+store.subscribe({type: 'Reset'}, (state) => 0)
+store.subscribe({type: 'Add2'}, (state) => state +2) 
+
 console.log(store.getState())
