@@ -45,8 +45,21 @@ const reducer = () => {
 const store = createStore(0, reducer)
 
 store.subscribe({type: 'Add'}, (state) => state +1)
-store.subscribe({type: 'Sub'}, (state) => state -1)
 store.subscribe({type: 'Reset'}, (state) => 0)
-store.subscribe({type: 'Add2'}, (state) => state +2) 
+store.subscribe({type: 'Sub'}, (state) => state -1) 
 
 console.log(store.getState())
+
+store.dispatch({type: 'Add'})
+console.log(store.getState())
+
+store.dispatch({type: 'Add'})
+console.log(store.getState())
+
+store.dispatch({type: 'Sub'})
+console.log(store.getState())
+
+store.dispatch({type:'Reset'})
+console.log(store.getState())
+
+
