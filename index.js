@@ -28,19 +28,20 @@ const  createStore = (initialState, reducer) => {
     }
 
     const dispatch = (action) => {
-        state = reducer (state, action, actions)
+        state = reducer(state, action, actions);
     }
 
     const getState = () => {
-        return state
-    }
+        return state;
+    };
 
     return {getState, dispatch, subscribe}
-}
-const reducer = () => {
-    const found = actions.find((newAction) => newAction.action.type === action.type)
-    return found.callback(state)
-}
+};
+
+const reducer = (state = 0, action, actions) => {
+    const found = actions.find((newAction) => newAction.action.type === action.type);
+    return found.callback(state);
+};
 
 const store = createStore(0, reducer)
 
@@ -59,7 +60,7 @@ console.log(store.getState())
 store.dispatch({type: 'Sub'})
 console.log(store.getState())
 
-store.dispatch({type:'Reset'})
+store.dispatch({type: 'Reset'})
 console.log(store.getState())
 
 
