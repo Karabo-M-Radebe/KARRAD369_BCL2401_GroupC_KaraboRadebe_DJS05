@@ -52,10 +52,13 @@ THEN the state should display a count of 0
 
 # Reflections 
 ## Areas of Mastery
+- I did not have an area that I mastered and this was due to the complexity of the project, I was not able to decipher everything enough to the point of mastery.  
 
 ## Challenges faced
-- 
+- one of the main challenges I faced throughout this project was trying to build a store and working on that, I was able to eventually figure it out by using the same file to build everything because using quokka when importing was an impossibility unless I engaged with QuokkaPro.  
+
 ## Areas of Improvement
+- I would like to greatly improve the way in which I research and gather data related to solving a problem that I'm facing, having great research skills plays a great role in the learning process. 
 
 # How to run my code
 1. Clone this repository.
@@ -64,3 +67,4 @@ THEN the state should display a count of 0
 4. Observe the output in the terminal.
 
 # Overall Learning Experience
+My overall experience throughout this project was one of great confusion, I was not able to immediately grasp the brief and tackle the project, I was however able to gain strides in progress once I enlisted the help of my peers and there was more clarity in the project and this led to its completion. I learnt new things and I'm eager to implement them at a later stage of my coding journey. 
